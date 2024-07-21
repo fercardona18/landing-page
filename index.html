@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Hogar Perfecto</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header, h1{
+           text-align: center;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+        #home {
+            background-color: #e6f2ff;
+        }
+        #nosotros {
+            background-color: #fff0e6;
+        }
+        #ofertas {
+            background-color: #ffe6e6;
+        }
+        #contacto {
+            background-color: #e6ffe6;
+        }
+        .product-grid, .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .product-item, .offer-item {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-item img, .offer-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/imagenes/logo.jpeg" alt="Logo" class="logo">
+        <h1>Tu Hogar Perfecto</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ofertas">Ofertas Especiales</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Bienvenidos a Tu Hogar Perfecto</h2>
+            <p>Descubre nuestra amplia gama de muebles y electrodomésticos para hacer de tu hogar un lugar ideal.</p>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="/imagenes/sofa moderno.jpg" alt="Sofá">
+                    <h3>Sofá Moderno</h3>
+                    <p>Cómodo sofá de 3 plazas en color gris.</p>
+                </div>
+                <div class="product-item">
+                    <img src="/imagenes/refrigerador inteligente.jpeg" alt="Refrigerador">
+                    <h3>Refrigerador Inteligente</h3>
+                    <p>Refrigerador de última generación con conectividad WiFi.</p>
+                </div>
+                <div class="product-item">
+                    <img src="/imagenes/mesa de comedor.jpg" alt="Mesa de Comedor">
+                    <h3>Mesa de Comedor</h3>
+                    <p>Elegante mesa de comedor extensible para 6-8 personas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Con más de 20 años de experiencia, nos especializamos en ofrecer productos de alta calidad para tu hogar.</p>
+        </section>
+        
+        <section id="ofertas">
+            <h2>Ofertas Especiales</h2>
+            <p>¡No te pierdas nuestras increíbles ofertas mensuales en muebles y electrodomésticos!</p>
+            <div class="offer-grid">
+                <div class="offer-item">
+                    <img src="/imagenes/lavadora.jpg" alt="Oferta Lavadora">
+                    <h3>Lavadora Eco-friendly</h3>
+                    <p>30% de descuento en nuestra lavadora de bajo consumo.</p>
+                </div>
+                <div class="offer-item">
+                    <img src="/imagenes/juego de sala 2.jpg" alt="Oferta Juego de Sala">
+                    <h3>Juego de Sala Completo</h3>
+                    <p>Llévate un juego de sala completo con un 25% de descuento.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Teléfono: (502) 41189837</p>
+            <p>Email: tuhogarperfecto.com</p>
+            <p>Dirección: 4-16 zona 4, Sanarate, El Progreso</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Muebles y Línea Blanca - Tu Hogar Perfecto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Función para mostrar un mensaje de bienvenida
+        function mostrarBienvenida() {
+            alert("¡Bienvenido a Tu Hogar Perfecto! Estamos aquí para ayudarte a encontrar los mejores muebles y electrodomésticos.");
+        }
+
+        // Llamar a la función cuando se carga la página
+        window.onload = mostrarBienvenida;
+    </script>
+</body>
+</html>
